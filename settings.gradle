@@ -1,0 +1,2 @@
+rootProject.name = 'study-spring-webflux'
+include 'stock-details', 'trading-service', 'stock-quotes'
