@@ -1,0 +1,10 @@
+# curl http://localhost:8081/quotes -i -H "Accept: application/x-ndjson"
+# intellij HTTP client로는 호출이 안됩니다.
+GET http://localhost:8081/quotes
+Accept: application/json
+
+### 정상적인호출
+GET http://localhost:8080/quotes/summary/GOOG
+
+### 2초동안 응답이 없어 fallback 처리 하는 경우
+GET http://localhost:8080/quotes/summary/PVTL
