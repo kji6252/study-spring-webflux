@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.5.1'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'io.gatling.gradle' version '3.7.4'
 }
 
 group = 'io.github.kji6252'
@@ -30,4 +31,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+gatling {
+    // WARNING: options below only work when logback config file isn't provided
+    logLevel = 'WARN' // logback root level
+    logHttp = 'NONE' // set to 'ALL' for all HTTP traffic in TRACE, 'FAILURES' for failed HTTP traffic in DEBUG
 }
